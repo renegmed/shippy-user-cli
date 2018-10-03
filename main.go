@@ -14,7 +14,7 @@ func main() {
 
 	srv := micro.NewService(
 
-		micro.Name("go.micro.srv.user"),
+		micro.Name("go.micro.srv.auth"),
 		micro.Version("latest"),
 	)
 
@@ -57,6 +57,8 @@ func main() {
 	}
 
 	log.Printf("Your access token is: %s \n", authResponse.Token)
+
+	log.Printf("Your access token is: %s \n", authResponse)
 
 	// let's just exit because
 	os.Exit(0)
